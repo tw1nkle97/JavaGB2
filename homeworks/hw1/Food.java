@@ -1,4 +1,4 @@
-package hw1;
+package homeworks.hw1;
 
 public class Food extends Product{
     protected String experationDate;

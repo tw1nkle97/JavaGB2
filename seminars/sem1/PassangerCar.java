@@ -1,4 +1,4 @@
-package sem1;
+package seminars.sem1;
 
 public class PassangerCar extends TransportVehicle{
     public PassangerCar(String color, String model, float weight, float maxSpeed){

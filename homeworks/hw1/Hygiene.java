@@ -1,4 +1,4 @@
-package hw1;
+package homeworks.hw1;
 
 public class Hygiene extends Product{
     protected int countInOne;

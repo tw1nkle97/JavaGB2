@@ -1,4 +1,4 @@
-package hw1;
+package homeworks.hw1;
 
 public class Lemonade extends Drinks{
     public Lemonade(String name, int price, int count, 

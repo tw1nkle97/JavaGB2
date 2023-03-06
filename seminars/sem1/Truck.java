@@ -1,4 +1,4 @@
-package sem1;
+package seminars.sem1;
 
 public class Truck extends TransportVehicle{
 

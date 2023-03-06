@@ -1,4 +1,4 @@
-package hw1;
+package homeworks.hw1;
 
 public class Masks extends Hygiene{
     public Masks(String name, int price, int count, 

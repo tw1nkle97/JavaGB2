@@ -1,4 +1,4 @@
-package hw1;
+package homeworks.hw1;
 
 public class Bread extends Food{
     protected String flourType;

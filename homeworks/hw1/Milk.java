@@ -1,4 +1,4 @@
-package hw1;
+package homeworks.hw1;
 
 public class Milk extends Food{
     protected int fat;

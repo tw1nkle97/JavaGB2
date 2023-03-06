@@ -1,4 +1,4 @@
-package hw1;
+package homeworks.hw1;
 
 public class Nipple extends Child{
     public Nipple(String name, int price, int count, 
