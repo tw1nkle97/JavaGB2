@@ -45,7 +45,7 @@ public class FigureCollection {
         }
     }
 
-    public void sortByArea() {
+    public void sortBySquare() {
         Collections.sort(figures, new Comparator<Figure>() {
             @Override
             public int compare(Figure f1, Figure f2) {
