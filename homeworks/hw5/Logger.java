@@ -1,26 +1,32 @@
 package homeworks.hw5;
 
-import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Logger {
-    private String filename;
+    private PrintWriter writer;
 
-    public Logger(String filename) {
-        this.filename = filename;
+    public Logger() {
+        try {
+            this.writer = new PrintWriter(new FileWriter("log.txt", true));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void log(String message) {
         LocalDateTime now = LocalDateTime.now();
-        String timestamp = now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-        String logMessage = timestamp + " - " + message + "\n";
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true))) {
-            writer.write(logMessage);
-        } catch (IOException e) {
-            System.err.println("Error writing log message: " + e.getMessage());
-        }
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String timestamp = now.format(formatter);
+        writer.println(timestamp + " " + message);
+        writer.flush();
+    }
+
+    public void close() {
+        writer.close();
     }
 }
+
