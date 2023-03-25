@@ -1,21 +1,30 @@
 package homeworks.hw3;
 
+import java.util.Scanner;
+
+import homeworks.hw3.Models.Circle;
+import homeworks.hw3.Models.FigureCollection;
+import homeworks.hw3.Models.Rectangle;
+import homeworks.hw3.Models.Square;
+import homeworks.hw3.Models.Triangle;
+import homeworks.hw3.Presenters.Menu;
+import homeworks.hw3.Presenters.Presenter;
+import homeworks.hw3.Views.View;
+
 public class Main {
 
     public static void main(String[] args) {
-
+        View view = new View(new Scanner(System.in));
         FigureCollection collection = new FigureCollection();
-
+        Presenter presenter = new Presenter(view, collection);
         collection.addFigure(new Triangle(3, 2, 3));
         collection.addFigure(new Square(5));
         collection.addFigure(new Rectangle(2, 3));
         collection.addFigure(new Circle(5));
+        Menu menu = new Menu(presenter, view);
+        menu.start();
 
-        collection.printAllFigures();
-        // Треугольник со сторонами: 3,00, 2,00, 3,00; Площадь: 2,83; Периметр: 8,00
-        // Квадрат со стороной: 5,00; Площадь: 25,00; Периметр: 20,00
-        // Прямоугольник с длиной 2,00 и шириной 3,00; Площадь: 6,00; Периметр: 10,00
-        // Круг с радиусом: 5,00; Площадь: 78,54; Длина окружности: 31,42
+        // collection.printAllFigures();
 
     }
 
