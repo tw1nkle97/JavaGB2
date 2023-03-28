@@ -1,9 +1,6 @@
 package homeworks.hw3.Presenters;
 
 import homeworks.hw3.Views.View;
-import seminars.sem2.Inter;
-
-import java.util.Scanner;
 
 import homeworks.hw3.Models.FigureCollection;
 
